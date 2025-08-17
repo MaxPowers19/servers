@@ -1,0 +1,36 @@
+id: figma-mcp
+name: Figma MCP Server
+category: productivity
+description: Collaborative design tool for creating user interfaces, prototypes, and
+  design systems
+long_description: Collaborative design tool for creating user interfaces, prototypes,
+  and design systems. This MCP server provides comprehensive integration through the
+  Model Context Protocol.
+maintainer:
+  name: Figma
+  github: figma
+  website: www.figma.com
+authentication:
+  type: oauth2
+  provider: figma
+  instructions: Visit the service provider to obtain API credentials for Figma MCP
+    Server
+endpoints:
+  production: https://www.figma.com/api/mcp
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Figma
+- id: write
+  name: Write Data
+  description: Write data to Figma
+tags:
+- productivity
+- figma
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

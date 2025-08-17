@@ -1,0 +1,35 @@
+id: quickbooks-mcp
+name: QuickBooks MCP Server
+category: payments
+description: Accounting software for small business financial management and bookkeeping
+long_description: Accounting software for small business financial management and
+  bookkeeping. This MCP server provides comprehensive integration through the Model
+  Context Protocol.
+maintainer:
+  name: QuickBooks
+  github: quickbooks
+  website: api.quickbooks.com
+authentication:
+  type: oauth2
+  provider: quickbooks
+  instructions: Visit the service provider to obtain API credentials for QuickBooks
+    MCP Server
+endpoints:
+  production: https://api.quickbooks.com/mcp/sse
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from QuickBooks
+- id: write
+  name: Write Data
+  description: Write data to QuickBooks
+tags:
+- payments
+- quickbooks
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

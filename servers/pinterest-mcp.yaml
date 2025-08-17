@@ -1,0 +1,36 @@
+id: pinterest-mcp
+name: Pinterest MCP Server
+category: productivity
+description: Visual discovery platform for finding ideas, recipes, style inspiration
+  and more
+long_description: Visual discovery platform for finding ideas, recipes, style inspiration
+  and more. This MCP server provides comprehensive integration through the Model Context
+  Protocol.
+maintainer:
+  name: Pinterest
+  github: pinterest
+  website: api.pinterest.com
+authentication:
+  type: oauth2
+  provider: pinterest
+  instructions: Visit the service provider to obtain API credentials for Pinterest
+    MCP Server
+endpoints:
+  production: https://api.pinterest.com/mcp/sse
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Pinterest
+- id: write
+  name: Write Data
+  description: Write data to Pinterest
+tags:
+- productivity
+- pinterest
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

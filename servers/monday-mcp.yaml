@@ -1,0 +1,35 @@
+id: monday-mcp
+name: Monday.com MCP Server
+category: productivity
+description: Work operating system for managing projects, workflows, and team collaboration
+long_description: Work operating system for managing projects, workflows, and team
+  collaboration. This MCP server provides comprehensive integration through the Model
+  Context Protocol.
+maintainer:
+  name: Monday.com
+  github: monday
+  website: api.monday.com
+authentication:
+  type: oauth2
+  provider: monday
+  instructions: Visit the service provider to obtain API credentials for Monday.com
+    MCP Server
+endpoints:
+  production: https://api.monday.com/mcp/sse
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Monday.com
+- id: write
+  name: Write Data
+  description: Write data to Monday.com
+tags:
+- productivity
+- monday
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

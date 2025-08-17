@@ -1,0 +1,36 @@
+id: zapier-mcp
+name: Zapier MCP Server
+category: productivity
+description: Automation platform connecting thousands of apps and services without
+  code
+long_description: Automation platform connecting thousands of apps and services without
+  code. This MCP server provides comprehensive integration through the Model Context
+  Protocol.
+maintainer:
+  name: Zapier
+  github: zapier
+  website: mcp.zapier.com
+authentication:
+  type: api-key
+  provider: zapier
+  instructions: Visit the service provider to obtain API credentials for Zapier MCP
+    Server
+endpoints:
+  production: https://mcp.zapier.com/api/mcp/mcp
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Zapier
+- id: write
+  name: Write Data
+  description: Write data to Zapier
+tags:
+- productivity
+- zapier
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

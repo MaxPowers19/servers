@@ -1,0 +1,35 @@
+id: resend-mcp
+name: Resend MCP Server
+category: communication
+description: Developer-first email API for sending transactional and marketing emails
+long_description: Developer-first email API for sending transactional and marketing
+  emails. This MCP server provides comprehensive integration through the Model Context
+  Protocol.
+maintainer:
+  name: Resend
+  github: resend
+  website: api.resend.com
+authentication:
+  type: api-key
+  provider: resend
+  instructions: Visit the service provider to obtain API credentials for Resend MCP
+    Server
+endpoints:
+  production: https://api.resend.com/mcp/v1
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Resend
+- id: write
+  name: Write Data
+  description: Write data to Resend
+tags:
+- communication
+- resend
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

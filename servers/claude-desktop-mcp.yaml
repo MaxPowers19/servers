@@ -1,0 +1,34 @@
+id: claude-desktop-mcp
+name: Claude Desktop MCP Server
+category: productivity
+description: Local MCP server integration for Claude Desktop application
+long_description: Local MCP server integration for Claude Desktop application. This
+  MCP server provides comprehensive integration through the Model Context Protocol.
+maintainer:
+  name: Claude Desktop
+  github: claude-desktop
+  website: null
+authentication:
+  type: none
+  provider: claude-desktop
+  instructions: Visit the service provider to obtain API credentials for Claude Desktop
+    MCP Server
+endpoints:
+  production: claude://settings/modelcontextprotocol
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Claude Desktop
+- id: write
+  name: Write Data
+  description: Write data to Claude Desktop
+tags:
+- productivity
+- claude-desktop
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

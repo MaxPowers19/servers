@@ -1,0 +1,34 @@
+id: hubspot-mcp
+name: HubSpot MCP Server
+category: productivity
+description: Inbound marketing, sales, and CRM platform for growing businesses
+long_description: Inbound marketing, sales, and CRM platform for growing businesses.
+  This MCP server provides comprehensive integration through the Model Context Protocol.
+maintainer:
+  name: HubSpot
+  github: hubspot
+  website: app.hubspot.com
+authentication:
+  type: api-key
+  provider: hubspot
+  instructions: Visit the service provider to obtain API credentials for HubSpot MCP
+    Server
+endpoints:
+  production: https://app.hubspot.com/mcp/v1/http
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from HubSpot
+- id: write
+  name: Write Data
+  description: Write data to HubSpot
+tags:
+- productivity
+- hubspot
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

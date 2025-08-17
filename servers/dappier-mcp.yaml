@@ -1,0 +1,34 @@
+id: dappier-mcp
+name: Dappier MCP Server
+category: ai-ml
+description: Real-time AI processing and machine learning model deployment platform
+long_description: Real-time AI processing and machine learning model deployment platform.
+  This MCP server provides comprehensive integration through the Model Context Protocol.
+maintainer:
+  name: Dappier
+  github: dappier
+  website: api.dappier.com
+authentication:
+  type: api-key
+  provider: dappier
+  instructions: Visit the service provider to obtain API credentials for Dappier MCP
+    Server
+endpoints:
+  production: https://api.dappier.com/mcp/rtai
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Dappier
+- id: write
+  name: Write Data
+  description: Write data to Dappier
+tags:
+- ai-ml
+- dappier
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

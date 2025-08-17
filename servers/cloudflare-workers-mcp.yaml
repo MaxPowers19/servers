@@ -1,0 +1,35 @@
+id: cloudflare-workers-mcp
+name: Cloudflare Workers MCP Server
+category: cloud
+description: Deploy and manage serverless functions on Cloudflare's global edge network
+long_description: Deploy and manage serverless functions on Cloudflare's global edge
+  network. This MCP server provides comprehensive integration through the Model Context
+  Protocol.
+maintainer:
+  name: Cloudflare Workers
+  github: cloudflare-workers
+  website: bindings.mcp.cloudflare.com
+authentication:
+  type: oauth2
+  provider: cloudflare-workers
+  instructions: Visit the service provider to obtain API credentials for Cloudflare
+    Workers MCP Server
+endpoints:
+  production: https://bindings.mcp.cloudflare.com/sse
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Cloudflare Workers
+- id: write
+  name: Write Data
+  description: Write data to Cloudflare Workers
+tags:
+- cloud
+- cloudflare-workers
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

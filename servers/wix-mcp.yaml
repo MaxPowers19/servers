@@ -1,0 +1,33 @@
+id: wix-mcp
+name: Wix MCP Server
+category: productivity
+description: Website builder and hosting platform with drag-and-drop design tools
+long_description: Website builder and hosting platform with drag-and-drop design tools.
+  This MCP server provides comprehensive integration through the Model Context Protocol.
+maintainer:
+  name: Wix
+  github: wix
+  website: api.wix.com
+authentication:
+  type: oauth2
+  provider: wix
+  instructions: Visit the service provider to obtain API credentials for Wix MCP Server
+endpoints:
+  production: https://api.wix.com/mcp/sse
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Wix
+- id: write
+  name: Write Data
+  description: Write data to Wix
+tags:
+- productivity
+- wix
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

@@ -1,0 +1,36 @@
+id: shopify-mcp
+name: Shopify MCP Server
+category: payments
+description: E-commerce platform for creating and managing online stores and retail
+  operations
+long_description: E-commerce platform for creating and managing online stores and
+  retail operations. This MCP server provides comprehensive integration through the
+  Model Context Protocol.
+maintainer:
+  name: Shopify
+  github: shopify
+  website: mcp.shopify.com
+authentication:
+  type: oauth2
+  provider: shopify
+  instructions: Visit the service provider to obtain API credentials for Shopify MCP
+    Server
+endpoints:
+  production: https://mcp.shopify.com/mcp
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Shopify
+- id: write
+  name: Write Data
+  description: Write data to Shopify
+tags:
+- payments
+- shopify
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

@@ -1,0 +1,35 @@
+id: salesforce-mcp
+name: Salesforce MCP Server
+category: productivity
+description: Customer relationship management platform for sales, service, and marketing
+long_description: Customer relationship management platform for sales, service, and
+  marketing. This MCP server provides comprehensive integration through the Model
+  Context Protocol.
+maintainer:
+  name: Salesforce
+  github: salesforce
+  website: api.salesforce.com
+authentication:
+  type: oauth2
+  provider: salesforce
+  instructions: Visit the service provider to obtain API credentials for Salesforce
+    MCP Server
+endpoints:
+  production: https://api.salesforce.com/services/mcp/sse
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Salesforce
+- id: write
+  name: Write Data
+  description: Write data to Salesforce
+tags:
+- productivity
+- salesforce
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

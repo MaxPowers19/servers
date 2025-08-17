@@ -1,0 +1,35 @@
+id: google-drive-mcp
+name: Google Drive MCP Server
+category: cloud
+description: Cloud storage and file synchronization service with collaborative features
+long_description: Cloud storage and file synchronization service with collaborative
+  features. This MCP server provides comprehensive integration through the Model Context
+  Protocol.
+maintainer:
+  name: Google Drive
+  github: google-drive
+  website: drive.google.com
+authentication:
+  type: oauth2
+  provider: google-drive
+  instructions: Visit the service provider to obtain API credentials for Google Drive
+    MCP Server
+endpoints:
+  production: https://drive.google.com/api/mcp/mcp
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Google Drive
+- id: write
+  name: Write Data
+  description: Write data to Google Drive
+tags:
+- cloud
+- google-drive
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

@@ -1,0 +1,35 @@
+id: microsoft-onedrive-mcp
+name: Microsoft OneDrive MCP Server
+category: cloud
+description: Cloud storage service integrated with Microsoft Office and Windows ecosystem
+long_description: Cloud storage service integrated with Microsoft Office and Windows
+  ecosystem. This MCP server provides comprehensive integration through the Model
+  Context Protocol.
+maintainer:
+  name: Microsoft OneDrive
+  github: microsoft-onedrive
+  website: api.onedrive.com
+authentication:
+  type: oauth2
+  provider: microsoft-onedrive
+  instructions: Visit the service provider to obtain API credentials for Microsoft
+    OneDrive MCP Server
+endpoints:
+  production: https://api.onedrive.com/mcp/sse
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Microsoft OneDrive
+- id: write
+  name: Write Data
+  description: Write data to Microsoft OneDrive
+tags:
+- cloud
+- microsoft-onedrive
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

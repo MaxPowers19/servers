@@ -1,0 +1,35 @@
+id: google-sheets-mcp
+name: Google Sheets MCP Server
+category: productivity
+description: Spreadsheet application for data analysis and collaborative number crunching
+long_description: Spreadsheet application for data analysis and collaborative number
+  crunching. This MCP server provides comprehensive integration through the Model
+  Context Protocol.
+maintainer:
+  name: Google Sheets
+  github: google-sheets
+  website: sheets.google.com
+authentication:
+  type: oauth2
+  provider: google-sheets
+  instructions: Visit the service provider to obtain API credentials for Google Sheets
+    MCP Server
+endpoints:
+  production: https://sheets.google.com/api/mcp/mcp
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Google Sheets
+- id: write
+  name: Write Data
+  description: Write data to Google Sheets
+tags:
+- productivity
+- google-sheets
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

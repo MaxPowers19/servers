@@ -1,0 +1,35 @@
+id: microsoft-teams-mcp
+name: Microsoft Teams MCP Server
+category: communication
+description: Business communication platform with chat, video meetings, and file collaboration
+long_description: Business communication platform with chat, video meetings, and file
+  collaboration. This MCP server provides comprehensive integration through the Model
+  Context Protocol.
+maintainer:
+  name: Microsoft Teams
+  github: microsoft-teams
+  website: api.teams.microsoft.com
+authentication:
+  type: oauth2
+  provider: microsoft-teams
+  instructions: Visit the service provider to obtain API credentials for Microsoft
+    Teams MCP Server
+endpoints:
+  production: https://api.teams.microsoft.com/mcp/mcp
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Microsoft Teams
+- id: write
+  name: Write Data
+  description: Write data to Microsoft Teams
+tags:
+- communication
+- microsoft-teams
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

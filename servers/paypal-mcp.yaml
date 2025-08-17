@@ -1,0 +1,35 @@
+id: paypal-mcp
+name: PayPal MCP Server
+category: payments
+description: Online payment system for secure money transfers and e-commerce transactions
+long_description: Online payment system for secure money transfers and e-commerce
+  transactions. This MCP server provides comprehensive integration through the Model
+  Context Protocol.
+maintainer:
+  name: PayPal
+  github: paypal
+  website: api.paypal.com
+authentication:
+  type: oauth2
+  provider: paypal
+  instructions: Visit the service provider to obtain API credentials for PayPal MCP
+    Server
+endpoints:
+  production: https://api.paypal.com/mcp/v1/sse
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from PayPal
+- id: write
+  name: Write Data
+  description: Write data to PayPal
+tags:
+- payments
+- paypal
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

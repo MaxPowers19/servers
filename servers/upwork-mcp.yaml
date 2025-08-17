@@ -1,0 +1,34 @@
+id: upwork-mcp
+name: Upwork MCP Server
+category: productivity
+description: Freelance marketplace for hiring and managing remote talent
+long_description: Freelance marketplace for hiring and managing remote talent. This
+  MCP server provides comprehensive integration through the Model Context Protocol.
+maintainer:
+  name: Upwork
+  github: upwork
+  website: api.upwork.com
+authentication:
+  type: oauth2
+  provider: upwork
+  instructions: Visit the service provider to obtain API credentials for Upwork MCP
+    Server
+endpoints:
+  production: https://api.upwork.com/mcp/sse
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Upwork
+- id: write
+  name: Write Data
+  description: Write data to Upwork
+tags:
+- productivity
+- upwork
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

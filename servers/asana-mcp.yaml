@@ -1,0 +1,36 @@
+id: asana-mcp
+name: Asana MCP Server
+category: productivity
+description: Project management and team collaboration platform for tracking tasks
+  and workflows
+long_description: Project management and team collaboration platform for tracking
+  tasks and workflows. This MCP server provides comprehensive integration through
+  the Model Context Protocol.
+maintainer:
+  name: Asana
+  github: asana
+  website: mcp.asana.com
+authentication:
+  type: oauth2
+  provider: asana
+  instructions: Visit the service provider to obtain API credentials for Asana MCP
+    Server
+endpoints:
+  production: https://mcp.asana.com/sse
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Asana
+- id: write
+  name: Write Data
+  description: Write data to Asana
+tags:
+- productivity
+- asana
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

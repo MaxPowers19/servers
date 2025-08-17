@@ -1,0 +1,34 @@
+id: stability-mcp
+name: Stability AI MCP Server
+category: ai-ml
+description: AI image generation platform with Stable Diffusion and other models
+long_description: AI image generation platform with Stable Diffusion and other models.
+  This MCP server provides comprehensive integration through the Model Context Protocol.
+maintainer:
+  name: Stability AI
+  github: stability
+  website: api.stability.ai
+authentication:
+  type: api-key
+  provider: stability
+  instructions: Visit the service provider to obtain API credentials for Stability
+    AI MCP Server
+endpoints:
+  production: https://api.stability.ai/mcp/sse
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Stability AI
+- id: write
+  name: Write Data
+  description: Write data to Stability AI
+tags:
+- ai-ml
+- stability
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

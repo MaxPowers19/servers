@@ -1,0 +1,35 @@
+id: snowflake-mcp
+name: Snowflake MCP Server
+category: database
+description: Cloud data warehouse for storing and analyzing massive amounts of data
+long_description: Cloud data warehouse for storing and analyzing massive amounts of
+  data. This MCP server provides comprehensive integration through the Model Context
+  Protocol.
+maintainer:
+  name: Snowflake
+  github: snowflake
+  website: api.snowflake.com
+authentication:
+  type: oauth2
+  provider: snowflake
+  instructions: Visit the service provider to obtain API credentials for Snowflake
+    MCP Server
+endpoints:
+  production: https://api.snowflake.com/mcp/v1/sse
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Snowflake
+- id: write
+  name: Write Data
+  description: Write data to Snowflake
+tags:
+- database
+- snowflake
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

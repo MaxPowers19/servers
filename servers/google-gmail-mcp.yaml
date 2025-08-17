@@ -1,0 +1,35 @@
+id: google-gmail-mcp
+name: Gmail MCP Server
+category: communication
+description: Email service with advanced search, filtering, and organization capabilities
+long_description: Email service with advanced search, filtering, and organization
+  capabilities. This MCP server provides comprehensive integration through the Model
+  Context Protocol.
+maintainer:
+  name: Gmail
+  github: google-gmail
+  website: gmail.google.com
+authentication:
+  type: oauth2
+  provider: google-gmail
+  instructions: Visit the service provider to obtain API credentials for Gmail MCP
+    Server
+endpoints:
+  production: https://gmail.google.com/api/mcp/mcp
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Gmail
+- id: write
+  name: Write Data
+  description: Write data to Gmail
+tags:
+- communication
+- google-gmail
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

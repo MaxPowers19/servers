@@ -1,0 +1,36 @@
+id: cloudflare-observability-mcp
+name: Cloudflare Observability MCP Server
+category: monitoring
+description: Monitor and analyze performance, security, and traffic on Cloudflare
+  infrastructure
+long_description: Monitor and analyze performance, security, and traffic on Cloudflare
+  infrastructure. This MCP server provides comprehensive integration through the Model
+  Context Protocol.
+maintainer:
+  name: Cloudflare Observability
+  github: cloudflare-observability
+  website: observability.mcp.cloudflare.com
+authentication:
+  type: oauth2
+  provider: cloudflare-observability
+  instructions: Visit the service provider to obtain API credentials for Cloudflare
+    Observability MCP Server
+endpoints:
+  production: https://observability.mcp.cloudflare.com/sse
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Cloudflare Observability
+- id: write
+  name: Write Data
+  description: Write data to Cloudflare Observability
+tags:
+- monitoring
+- cloudflare-observability
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

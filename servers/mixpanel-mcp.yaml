@@ -1,0 +1,34 @@
+id: mixpanel-mcp
+name: Mixpanel MCP Server
+category: data-analysis
+description: Product analytics platform for tracking user interactions and behavior
+long_description: Product analytics platform for tracking user interactions and behavior.
+  This MCP server provides comprehensive integration through the Model Context Protocol.
+maintainer:
+  name: Mixpanel
+  github: mixpanel
+  website: mcp.mixpanel.com
+authentication:
+  type: oauth2
+  provider: mixpanel
+  instructions: Visit the service provider to obtain API credentials for Mixpanel
+    MCP Server
+endpoints:
+  production: https://mcp.mixpanel.com/mcp
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Mixpanel
+- id: write
+  name: Write Data
+  description: Write data to Mixpanel
+tags:
+- data-analysis
+- mixpanel
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

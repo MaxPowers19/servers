@@ -1,0 +1,36 @@
+id: discord-mcp
+name: Discord MCP Server
+category: communication
+description: Community chat platform with voice, video, and text communication for
+  gaming and teams
+long_description: Community chat platform with voice, video, and text communication
+  for gaming and teams. This MCP server provides comprehensive integration through
+  the Model Context Protocol.
+maintainer:
+  name: Discord
+  github: discord
+  website: mcp.discord.com
+authentication:
+  type: oauth2
+  provider: discord
+  instructions: Visit the service provider to obtain API credentials for Discord MCP
+    Server
+endpoints:
+  production: https://mcp.discord.com/api/v1
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Discord
+- id: write
+  name: Write Data
+  description: Write data to Discord
+tags:
+- communication
+- discord
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

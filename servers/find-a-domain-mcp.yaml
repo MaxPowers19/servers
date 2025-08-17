@@ -1,0 +1,36 @@
+id: find-a-domain-mcp
+name: Find-A-Domain MCP Server
+category: productivity
+description: Domain name search and availability checking service for finding the
+  perfect domain
+long_description: Domain name search and availability checking service for finding
+  the perfect domain. This MCP server provides comprehensive integration through the
+  Model Context Protocol.
+maintainer:
+  name: Find-A-Domain
+  github: find-a-domain
+  website: api.findadomain.dev
+authentication:
+  type: none
+  provider: find-a-domain
+  instructions: Visit the service provider to obtain API credentials for Find-A-Domain
+    MCP Server
+endpoints:
+  production: https://api.findadomain.dev/mcp
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Find-A-Domain
+- id: write
+  name: Write Data
+  description: Write data to Find-A-Domain
+tags:
+- productivity
+- find-a-domain
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false

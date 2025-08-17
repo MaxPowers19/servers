@@ -1,0 +1,36 @@
+id: atlassian-mcp
+name: Atlassian MCP Server
+category: development
+description: Access Jira, Confluence, Bitbucket and other Atlassian tools for development
+  teams
+long_description: Access Jira, Confluence, Bitbucket and other Atlassian tools for
+  development teams. This MCP server provides comprehensive integration through the
+  Model Context Protocol.
+maintainer:
+  name: Atlassian
+  github: atlassian
+  website: mcp.atlassian.com
+authentication:
+  type: oauth2
+  provider: atlassian
+  instructions: Visit the service provider to obtain API credentials for Atlassian
+    MCP Server
+endpoints:
+  production: https://mcp.atlassian.com/v1/sse
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Atlassian
+- id: write
+  name: Write Data
+  description: Write data to Atlassian
+tags:
+- development
+- atlassian
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2024-12-10T00:00:00Z'
+  security_audit: false
+featured: false
