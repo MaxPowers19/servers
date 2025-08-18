@@ -6,14 +6,14 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Submit a New MCP Server
+        ## Submit a New Remote MCP Server
         Thank you for contributing to RemoteMCPList! Please fill out the information below.
         
   - type: input
     id: server_id
     attributes:
       label: Server ID
-      description: Unique identifier (lowercase, hyphens only)
+      description: Unique identifier (lowercase, hyphens only, e.g., github-mcp)
       placeholder: github-mcp
     validations:
       required: true
@@ -50,8 +50,8 @@ body:
     id: description
     attributes:
       label: Short Description
-      description: Brief description (50-200 characters)
-      placeholder: What does this server do?
+      description: Brief description (20-200 characters)
+      placeholder: What does this server do in one sentence?
     validations:
       required: true
       
@@ -59,26 +59,26 @@ body:
     id: long_description
     attributes:
       label: Detailed Description
-      description: Comprehensive description with use cases
-      placeholder: Provide detailed information about the server's capabilities...
+      description: Comprehensive description with use cases (must be longer than short description)
+      placeholder: Provide detailed information about the server's capabilities, use cases, and benefits...
     validations:
       required: true
       
   - type: input
-    id: repository
+    id: endpoint
     attributes:
-      label: Repository URL
-      description: GitHub repository URL
-      placeholder: https://github.com/owner/repo
+      label: Production Endpoint URL
+      description: HTTPS endpoint for the remote MCP server
+      placeholder: https://api.example.com/mcp
     validations:
       required: true
       
   - type: input
-    id: documentation
+    id: sandbox_endpoint
     attributes:
-      label: Documentation URL
-      description: Link to documentation
-      placeholder: https://docs.example.com/mcp
+      label: Sandbox Endpoint URL (Optional)
+      description: Optional sandbox/testing endpoint
+      placeholder: https://sandbox.example.com/mcp
     validations:
       required: false
       
@@ -87,18 +87,31 @@ body:
     attributes:
       label: Authentication Type
       options:
-        - OAuth2
-        - API Key
-        - None (Open Access)
+        - oauth2
+        - api-key
+        - none
     validations:
       required: true
       
   - type: input
-    id: endpoint
+    id: auth_provider
     attributes:
-      label: WebSocket Endpoint
-      description: Production WebSocket URL
-      placeholder: wss://example.com/mcp
+      label: Authentication Provider
+      description: Provider name (e.g., github, google, custom)
+      placeholder: github
+    validations:
+      required: true
+      
+  - type: textarea
+    id: auth_instructions
+    attributes:
+      label: Authentication Instructions
+      description: Step-by-step instructions for obtaining credentials
+      placeholder: |
+        1. Go to Settings > Developer settings
+        2. Generate a new API token
+        3. Select the required scopes
+        4. Copy the token to your MCP configuration
     validations:
       required: true
       
@@ -106,26 +119,13 @@ body:
     id: capabilities
     attributes:
       label: Main Capabilities
-      description: List the main capabilities (one per line)
+      description: List the main capabilities with IDs and descriptions
       placeholder: |
-        Read repositories
-        Create issues
-        Manage pull requests
+        repository.read - Read repository contents and metadata
+        issues.manage - Create, update, and close issues
+        pulls.review - Review and manage pull requests
     validations:
       required: true
-      
-  - type: textarea
-    id: example
-    attributes:
-      label: Code Example
-      description: Provide a simple usage example
-      render: javascript
-      placeholder: |
-        const result = await mcp.call('server.method', {
-          param: 'value'
-        });
-    validations:
-      required: false
       
   - type: input
     id: maintainer_name
@@ -138,9 +138,27 @@ body:
   - type: input
     id: maintainer_github
     attributes:
-      label: Maintainer GitHub
-      description: GitHub username
+      label: Maintainer GitHub Username
+      description: GitHub username (without @)
       placeholder: username
+    validations:
+      required: true
+      
+  - type: input
+    id: maintainer_website
+    attributes:
+      label: Maintainer Website (Optional)
+      description: Website or domain (e.g., example.com or https://example.com)
+      placeholder: example.com
+    validations:
+      required: false
+      
+  - type: textarea
+    id: tags
+    attributes:
+      label: Tags
+      description: Tags for search/filtering (comma-separated)
+      placeholder: github, version-control, development, mcp, remote
     validations:
       required: true
       
@@ -157,4 +175,6 @@ body:
         - label: The server follows MCP protocol standards
           required: true
         - label: I am the maintainer or have permission to submit
+          required: true
+        - label: This is a REMOTE MCP server (not a local server)
           required: true
