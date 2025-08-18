@@ -23,9 +23,9 @@ VALID_STATUSES = ['verified', 'pending', 'unverified']
 
 # Required fields
 REQUIRED_FIELDS = [
-    'id', 'name', 'category', 'description', 'maintainer',
-    'repository', 'authentication', 'endpoints', 'capabilities',
-    'tags', 'active'
+    'id', 'name', 'category', 'description', 'long_description', 
+    'maintainer', 'authentication', 'endpoints', 'capabilities',
+    'tags', 'verification', 'featured'
 ]
 
 def validate_server(file_path):
@@ -58,8 +58,13 @@ def validate_server(file_path):
     # Validate description length
     if 'description' in data:
         desc_len = len(data['description'])
-        if desc_len < 50 or desc_len > 200:
-            errors.append(f"Description must be 50-200 characters (current: {desc_len})")
+        if desc_len < 20 or desc_len > 200:
+            errors.append(f"Description must be 20-200 characters (current: {desc_len})")
+    
+    # Validate long_description exists and is longer than description
+    if 'long_description' in data and 'description' in data:
+        if len(data['long_description']) < len(data['description']):
+            errors.append("Long description must be longer than description")
     
     # Validate authentication
     if 'authentication' in data:
@@ -74,17 +79,18 @@ def validate_server(file_path):
             errors.append(f"Invalid verification status: {verification['status']}")
     
     # Validate dates
-    if 'metrics' in data and 'last_updated' in data['metrics']:
+    if 'verification' in data and 'tested_date' in data['verification']:
         try:
-            datetime.fromisoformat(data['metrics']['last_updated'].replace('Z', '+00:00'))
+            datetime.fromisoformat(data['verification']['tested_date'].replace('Z', '+00:00'))
         except:
-            errors.append(f"Invalid date format for last_updated: {data['metrics']['last_updated']}")
+            errors.append(f"Invalid date format for tested_date: {data['verification']['tested_date']}")
     
-    # Validate URLs
-    if 'repository' in data and 'url' in data['repository']:
-        url = data['repository']['url']
-        if not url.startswith(('http://', 'https://')):
-            errors.append(f"Invalid repository URL: {url}")
+    # Validate maintainer website URL if present
+    if 'maintainer' in data and 'website' in data['maintainer']:
+        website = data['maintainer']['website']
+        # Website can be just domain or full URL
+        if '://' in website and not website.startswith(('http://', 'https://')):
+            errors.append(f"Invalid maintainer website URL: {website}")
     
     if 'endpoints' in data:
         endpoints = data['endpoints']

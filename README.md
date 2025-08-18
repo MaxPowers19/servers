@@ -39,69 +39,50 @@ name: GitHub MCP Server           # Display name
 category: development             # One of: development, data-analysis, communication, 
                                  # payments, cloud, productivity, security, database, 
                                  # ai-ml, monitoring
-description: Complete GitHub integration for MCP  # 50-200 characters
-long_description: |               # Detailed description with markdown
-  The GitHub MCP Server provides comprehensive access to GitHub's API...
+description: Complete GitHub integration for MCP  # 20-200 characters
+long_description: |               # Detailed description (must be longer than description)
+  The GitHub MCP Server provides comprehensive access to GitHub's API,
+  enabling AI assistants to manage repositories, issues, pull requests,
+  and automate development workflows through the Model Context Protocol.
 
 maintainer:
   name: Anthropic                 # Your name or organization
   github: anthropic               # GitHub username
-  website: https://anthropic.com  # Optional
-
-repository:
-  url: https://github.com/modelcontextprotocol/servers
-  stars: 1250                     # Will be auto-updated
+  website: anthropic.com          # Optional (domain or full URL)
 
 authentication:
   type: oauth2                    # One of: oauth2, api-key, none
   provider: github                # e.g., github, google, custom
   instructions: |                 # How to get credentials
-    1. Go to GitHub Settings...
+    1. Go to GitHub Settings > Developer settings
+    2. Create a personal access token
+    3. Configure in your MCP client
 
 endpoints:
-  production: wss://github-mcp.example.com
-  sandbox: wss://sandbox.github-mcp.example.com  # Optional
-  documentation: https://docs.example.com
+  production: https://github-mcp.example.com      # Required
+  sandbox: https://sandbox.github-mcp.example.com # Optional
 
 capabilities:                     # List what the server can do
   - id: repository.read
     name: Read Repositories
-    description: Access repository contents
-
-examples:                         # Code examples (optional but recommended)
-  - title: List Issues
-    description: Fetch repository issues
-    language: javascript
-    code: |
-      const issues = await mcp.call('github.issues.list', {
-        owner: 'anthropic',
-        repo: 'claude'
-      });
+    description: Access repository contents and metadata
+  - id: issues.manage
+    name: Manage Issues  
+    description: Create, update, and close issues
 
 tags:                            # For search/filtering
   - github
   - version-control
   - development
-
-metrics:
-  weekly_downloads: 15000        # Optional, will be tracked
-  total_users: 5000
-  last_updated: "2024-12-15T00:00:00Z"
+  - mcp
+  - remote
 
 verification:
   status: pending                # verified, pending, or unverified
   tested_date: "2024-12-10T00:00:00Z"
   security_audit: false
 
-seo:                            # SEO optimization
-  title: GitHub MCP Server - Complete GitHub Integration
-  description: Connect AI to GitHub with MCP...
-  keywords:
-    - github mcp
-    - mcp github integration
-
-featured: false                 # Show on homepage
-active: true                    # Is actively maintained
+featured: false                  # Show on homepage (only one should be true)
 ```
 
 ## 📁 Repository Structure
