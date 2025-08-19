@@ -89,7 +89,7 @@ def validate_server(file_path):
     if 'maintainer' in data and 'website' in data['maintainer']:
         website = data['maintainer']['website']
         # Website can be just domain or full URL
-        if '://' in website and not website.startswith(('http://', 'https://')):
+        if website and '://' in website and not website.startswith(('http://', 'https://')):
             errors.append(f"Invalid maintainer website URL: {website}")
     
     if 'endpoints' in data:
