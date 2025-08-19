@@ -1,0 +1,32 @@
+id: javadocs-mcp
+name: Javadocs.dev
+category: development
+
+description: Maven Central Java, Kotlin, and Scala library documentation (javadoc)
+long_description: |
+  Maven Central Java, Kotlin, and Scala library documentation (javadoc)
+
+maintainer:
+  name: James Ward
+  github: jamesward
+  website: javadocs.dev
+
+authentication:
+  type: none
+
+endpoints:
+  production: https://www.javadocs.dev/mcp
+
+tags:
+  - documentation
+  - java
+  - kotlin
+  - scala
+  - remote
+
+verification:
+  status: pending
+  tested_date: "2025-08-19T00:00:00Z"
+  security_audit: false
+
+featured: false
