@@ -1,0 +1,46 @@
+id: kiwi-flight-search
+name: Kiwi.com Flight Search MCP Server
+category: productivity
+description: Search and book flights directly from your AI assistant using Kiwi.com's flight search engine
+long_description: |
+  The Kiwi.com MCP server allows you to search and book flights using the Kiwi.com flights search engine.
+  It provides instant access to a curated list of the best flights for your trip based on round-trip or 
+  one-way preferences, origin/destination (city or airport), travel dates with flexibility up to +/- 3 days,
+  number and types of passengers (adult, child, infant), and cabin class (economy, premium economy, business, 
+  first class). Simply ask your AI assistant to find flights and each result includes a direct booking link.
+
+maintainer:
+  name: Kiwi.com
+  github: kiwicom
+  website: kiwi.com
+
+authentication:
+  type: none
+  provider: open
+  instructions: |
+    No authentication required. This is an open access MCP server.
+    Simply configure the endpoint URL in your MCP client.
+
+endpoints:
+  production: https://mcp.kiwi.com
+
+capabilities:
+  - id: search-flight
+    name: Search Flights
+    description: Search for flights with comprehensive filtering options including dates, passengers, and cabin class
+
+tags:
+  - travel
+  - flights
+  - booking
+  - kiwi
+  - mcp
+  - remote
+  - productivity
+
+verification:
+  status: pending
+  tested_date: "2024-12-19T00:00:00Z"
+  security_audit: false
+
+featured: false
