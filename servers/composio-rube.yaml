@@ -1,0 +1,34 @@
+id: composio-rube
+name: Rube
+category: productivity
+description: It connects AI chat tools to more than 500 business and productivity applications
+long_description: It connects AI chat tools to more than 500 business and productivity applications – things like Gmail, Slack, Notion, GitHub, Linear, Airtable, and many others. Once installed, you can ask your AI tool to perform everyday tasks (e.g. “send an email to the latest customer,” “create a Linear issue,” “update my Notion database,” or “post an update to Slack”) and Rube will securely talk to the relevant apps on your behalf.
+maintainer:
+  name: Composio
+  github: Composiohq
+  website: composio.dev
+authentication:
+  type: OAuth2
+  provider: Composio
+  instructions:
+  1. Go to rube.composio.dev
+  2. Set up the server for your client
+  3. Composio handles authentication for you
+endpoints:
+  production: https://rube.composio.dev/mcp
+capabilities:
+- id: read
+  name: Read Data
+  description: Read data from Composio
+- id: write
+  name: Write Data
+  description: Write data to Composio
+tags:
+- productivity
+- mcp
+- remote
+verification:
+  status: pending
+  tested_date: '2025-08-21T00:00:00Z'
+  security_audit: false
+featured: false
