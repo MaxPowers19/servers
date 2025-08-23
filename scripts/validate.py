@@ -96,7 +96,8 @@ def validate_server(file_path):
         endpoints = data['endpoints']
         if 'production' in endpoints:
             prod_url = endpoints['production']
-            if not prod_url.startswith(('ws://', 'wss://', 'http://', 'https://')):
+            # Allow standard protocols and special claude:// protocol for Claude Desktop
+            if not prod_url.startswith(('ws://', 'wss://', 'http://', 'https://', 'claude://')):
                 errors.append(f"Invalid production endpoint: {prod_url}")
     
     return errors
