@@ -1,0 +1,54 @@
+id: meta-ads-mcp
+name: Meta Ads MCP Server
+category: data-analysis
+description: Manage and analyze Meta (Facebook) Ads campaigns through MCP
+long_description: |
+  Meta Ads MCP Server provides comprehensive access to Meta's advertising platform,
+  enabling AI assistants to manage Facebook and Instagram ad campaigns, analyze 
+  performance metrics, create audiences, and optimize ad spend through the Model 
+  Context Protocol.
+
+maintainer:
+  name: Pipeboard
+  github: pipeboard-co
+  website: pipeboard.co
+
+authentication:
+  type: oauth2
+  provider: pipeboard
+  instructions: |
+    Multiple authentication methods available:
+    1. OAuth2 with dynamic client registration via Pipeboard
+    2. Pipeboard API key from https://pipeboard.co
+    3. Direct Meta access token
+    Visit https://pipeboard.co for credentials
+
+endpoints:
+  production: https://mcp.pipeboard.co/meta-ads-mcp
+
+capabilities:
+  - id: campaigns.manage
+    name: Manage Campaigns
+    description: Create, update, and manage ad campaigns
+  - id: analytics.read
+    name: Read Analytics
+    description: Access performance metrics and insights
+  - id: audiences.create
+    name: Create Audiences
+    description: Build and manage custom audiences
+
+tags:
+  - meta
+  - facebook-ads
+  - advertising
+  - marketing
+  - mcp
+  - remote
+  - analytics
+
+verification:
+  status: pending
+  tested_date: "2024-12-19T00:00:00Z"  
+  security_audit: false
+
+featured: false
