@@ -1,0 +1,96 @@
+name: Submit New MCP Server
+description: Submit a new remote MCP server to the directory
+title: "[NEW SERVER]: "
+labels: [new-server]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Submit a New Remote MCP Server
+        Thank you for contributing to RemoteMCPList!
+        
+  - type: input
+    id: server-name
+    attributes:
+      label: Server Name
+      description: Display name for the server
+      placeholder: e.g., GitHub MCP Server
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Primary category for this server
+      options:
+        - development
+        - data-analysis
+        - communication
+        - payments
+        - cloud
+        - productivity
+        - security
+        - database
+        - ai-ml
+        - monitoring
+    validations:
+      required: true
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Brief description of what this server does
+      placeholder: What does this server do?
+    validations:
+      required: true
+      
+  - type: input
+    id: endpoint
+    attributes:
+      label: Production Endpoint URL
+      description: HTTPS endpoint for the remote MCP server
+      placeholder: https://api.example.com/mcp
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: auth-type
+    attributes:
+      label: Authentication Type
+      options:
+        - oauth2
+        - api-key
+        - none
+    validations:
+      required: true
+      
+  - type: textarea
+    id: auth-instructions
+    attributes:
+      label: Authentication Instructions
+      description: How to obtain credentials
+      placeholder: Steps to get API key or OAuth credentials
+    validations:
+      required: true
+      
+  - type: input
+    id: maintainer
+    attributes:
+      label: Maintainer GitHub Username
+      description: GitHub username of the maintainer
+      placeholder: username
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Verification
+      description: Please confirm
+      options:
+        - label: I have tested this server and it works
+          required: true
+        - label: This is a REMOTE MCP server (not local)
+          required: true
