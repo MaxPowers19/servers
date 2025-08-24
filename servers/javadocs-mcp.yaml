@@ -27,15 +27,15 @@ endpoints:
   production: https://www.javadocs.dev/mcp
 
 capabilities:
-  - id: get.latest
+  - id: get_latest_version
     name: Get Latest Version
-    description: Retrieve the latest version of a Maven Central artifact by group and artifact ID
-  - id: javadoc.contents
-    name: List Javadoc Contents
-    description: Get a list of all classes and packages in a javadoc jar for a specific artifact version
-  - id: javadoc.symbol
-    name: Get Symbol Documentation
-    description: Retrieve the full javadoc content for a specific class, method, or symbol
+    description: Gets the latest version of a given artifact (requires group ID and artifact ID)
+  - id: get_javadoc_content_list
+    name: Get Javadoc Content List
+    description: Gets a list of the contents of a javadoc jar (requires group ID, artifact ID, and version)
+  - id: get_javadoc_symbol_contents
+    name: Get Javadoc Symbol Contents
+    description: Gets the contents of a javadoc symbol - get the symbol link from the content list tool first
 
 tags:
   - documentation
