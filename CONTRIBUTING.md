@@ -45,13 +45,13 @@ Please ensure your MCP server:
 - ✅ Follows the Model Context Protocol standards
 - ✅ Has documentation available
 - ✅ Is actively maintained
-- ✅ Has a valid WebSocket endpoint
+- ✅ Has a valid HTTP endpoint (MCP uses SSE/streaming HTTP)
 
 ### Submission Requirements
 
 1. **Unique ID**: Use lowercase letters and hyphens only (e.g., `github-mcp`)
 2. **Accurate Information**: All fields should be current and correct
-3. **Working Endpoints**: Test that the WebSocket endpoint is accessible
+3. **Working Endpoints**: Test that the HTTP/SSE endpoint is accessible
 4. **Clear Description**: Explain what the server does in 50-200 characters
 5. **Proper Category**: Choose the most appropriate category
 
