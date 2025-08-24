@@ -25,10 +25,10 @@ This repository contains the data that powers [RemoteMCPList.com](https://remote
 4. Run validation: `python scripts/validate.py servers/your-server.yaml`
 5. Submit a pull request
 
-### Option 2: For Everyone (Request Form)
-1. [Open a server request issue](https://github.com/remotemcplist/servers/issues/new/choose)
-2. Fill out the structured form
-3. We'll help you create the YAML and PR
+### Option 2: For Everyone (Need Help?)
+1. [Open an issue](https://github.com/remotemcplist/servers/issues/new) describing your server
+2. Include all relevant details (name, endpoint, capabilities)
+3. We'll help you create the YAML and guide you through the PR
 
 📖 **[Full guide in CONTRIBUTING.md](CONTRIBUTING.md)**
 
@@ -103,9 +103,10 @@ scripts/
 
 .github/
 ├── ISSUE_TEMPLATE/
-│   └── new-server.yml   # Issue template for submissions
-└── workflows/
-    └── validate.yml     # Auto-validation on PRs
+│   └── bug_report.yml   # Bug report template
+├── workflows/
+│   └── validate.yml     # Auto-validation on PRs
+└── pull_request_template.md  # PR template for submissions
 ```
 
 ## ✅ Validation
@@ -177,7 +178,7 @@ Inspired by awesome-lists and the MCP community. Special thanks to all contribut
 
 - **Website**: [remotemcplist.com](https://remotemcplist.com)
 - **API Docs**: [remotemcplist.com/api/docs](https://remotemcplist.com/api/docs)
-- **Submit Server**: [New Issue](https://github.com/remotemcplist/servers/issues/new?template=new-server.yml)
+- **Submit Server**: [Contributing Guide](https://github.com/remotemcplist/servers/blob/main/CONTRIBUTING.md)
 - **Discussion**: [GitHub Discussions](https://github.com/remotemcplist/servers/discussions)
 
 ---

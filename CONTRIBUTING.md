@@ -2,31 +2,39 @@
 
 Thank you for your interest in contributing to RemoteMCPList! This guide will help you add new MCP servers to our directory.
 
-## 🚀 Quick Start
+## 🚀 How to Contribute
 
-### Choose Your Path:
+The best way to add a new MCP server is by submitting a Pull Request with your server's YAML file. Don't worry if you're new to Git - we'll guide you through it!
 
-**👨‍💻 Technical Users:** Create a Pull Request directly (see below)
+## 📝 Step-by-Step Guide
 
-**👥 Everyone:** Use our [server request form](https://github.com/remotemcplist/servers/issues/new/choose) and we'll help you create the YAML
+### 1️⃣ Fork this Repository
+Click the "Fork" button at the top right of this page to create your own copy.
 
-## 📝 Method 1: Direct Pull Request (Recommended)
+### 2️⃣ Create Your Server File
+1. Copy `example-server.yaml` as a template
+2. Name it `servers/your-server-name.yaml` (use lowercase and hyphens)
+3. Fill in all the required fields with your server's information
 
-1. **Fork** this repository
-2. **Copy** `example-server.yaml` to `servers/your-server.yaml`
-3. **Edit** with your server details
-4. **Validate**: `python scripts/validate.py servers/your-server.yaml`
-5. **Commit**: `Add [Server Name] MCP server`
-6. **Push** and create Pull Request
+### 3️⃣ Validate Your File
+```bash
+python scripts/validate.py servers/your-server-name.yaml
+```
 
-## 📄 Method 2: Server Request Issue
+### 4️⃣ Submit a Pull Request
+1. Commit your changes: `git commit -m "Add [Your Server Name] MCP server"`
+2. Push to your fork: `git push origin main`
+3. Click "Create Pull Request" on GitHub
+4. Fill out the PR template
 
-1. [Open a server request](https://github.com/remotemcplist/servers/issues/new/choose)
-2. Select "New Server Request"
-3. Fill out all fields
-4. Submit the issue
-5. We'll help generate the YAML
-6. Create PR with the generated YAML
+## 💡 Need Help?
+
+If you're not comfortable with Git or need assistance:
+1. [Open an issue](https://github.com/remotemcplist/servers/issues/new) describing your server
+2. Include as much information as possible
+3. We'll help you create the YAML file and guide you through the PR process
+
+Remember: Pull Requests are the fastest way to get your server added!
 
 ## 📝 Contribution Guidelines
 

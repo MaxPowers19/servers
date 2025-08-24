@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: 📚 Contributing Guide
+  - name: 🚀 Submit a New MCP Server
     url: https://github.com/remotemcplist/servers/blob/main/CONTRIBUTING.md
-    about: Learn how to submit servers via Pull Request
+    about: Submit new servers via Pull Request (recommended approach)
   - name: 🌐 RemoteMCPList Website
     url: https://www.remotemcplist.com
     about: Browse all MCP servers in our directory
