@@ -1,0 +1,179 @@
+name: 🚀 New Server Request
+description: Request addition of a new remote MCP server to the directory
+title: "[NEW]: "
+labels: ["new-server-request", "needs-yaml"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Request a New MCP Server Addition
+        Fill out this form and we'll help you create the YAML file for your Pull Request.
+        
+  - type: input
+    id: server-id
+    attributes:
+      label: Server ID
+      description: Unique identifier (lowercase, hyphens only)
+      placeholder: "example-mcp"
+    validations:
+      required: true
+      
+  - type: input
+    id: server-name
+    attributes:
+      label: Server Name
+      description: Display name for the server
+      placeholder: "Example MCP Server"
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - development
+        - data-analysis
+        - communication
+        - payments
+        - cloud
+        - productivity
+        - security
+        - database
+        - ai-ml
+        - monitoring
+    validations:
+      required: true
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: Short Description
+      description: Brief description (20-200 characters)
+      placeholder: "What does this server do in one sentence?"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: long-description
+    attributes:
+      label: Long Description
+      description: Detailed description with features and use cases
+      placeholder: "Provide detailed information about capabilities..."
+    validations:
+      required: true
+      
+  - type: input
+    id: maintainer-name
+    attributes:
+      label: Maintainer Name
+      placeholder: "Your Name or Organization"
+    validations:
+      required: true
+      
+  - type: input
+    id: maintainer-github
+    attributes:
+      label: Maintainer GitHub Username
+      description: Without the @ symbol
+      placeholder: "username"
+    validations:
+      required: true
+      
+  - type: input
+    id: maintainer-website
+    attributes:
+      label: Maintainer Website (Optional)
+      placeholder: "example.com"
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: auth-type
+    attributes:
+      label: Authentication Type
+      options:
+        - oauth2
+        - api-key
+        - none
+    validations:
+      required: true
+      
+  - type: input
+    id: auth-provider
+    attributes:
+      label: Authentication Provider
+      description: "e.g., github, google, custom"
+      placeholder: "custom"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: auth-instructions
+    attributes:
+      label: Authentication Instructions
+      description: Step-by-step guide to obtain credentials
+      placeholder: |
+        1. Go to developer console
+        2. Create application
+        3. Copy credentials
+    validations:
+      required: true
+      
+  - type: input
+    id: endpoint-production
+    attributes:
+      label: Production Endpoint URL
+      placeholder: "https://api.example.com/mcp"
+    validations:
+      required: true
+      
+  - type: input
+    id: endpoint-sandbox
+    attributes:
+      label: Sandbox Endpoint URL (Optional)
+      placeholder: "https://sandbox.example.com/mcp"
+    validations:
+      required: false
+      
+  - type: textarea
+    id: capabilities
+    attributes:
+      label: Capabilities
+      description: "List capabilities (one per line) in format: id | name | description"
+      placeholder: |
+        read.data | Read Data | Access and retrieve data from the service
+        write.data | Write Data | Create and update data in the service
+    validations:
+      required: true
+      
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: Comma-separated tags for search
+      placeholder: "api, integration, mcp, remote"
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: This is a REMOTE MCP server (not local)
+          required: true
+        - label: I have tested this server and it works
+          required: true
+        - label: The endpoint URL is publicly accessible
+          required: true
+          
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### Next Steps
+        After submitting this issue:
+        1. We'll generate the YAML file from your input
+        2. You can copy it and create a Pull Request
+        3. Or we'll create the PR if you need help

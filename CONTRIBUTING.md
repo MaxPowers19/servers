@@ -4,10 +4,29 @@ Thank you for your interest in contributing to RemoteMCPList! This guide will he
 
 ## 🚀 Quick Start
 
-The easiest way to contribute is through our GitHub issue template:
-1. [Create a new issue](https://github.com/remotemcplist/servers/issues/new?template=new-server.yml)
-2. Fill out the form
-3. Submit!
+### Choose Your Path:
+
+**👨‍💻 Technical Users:** Create a Pull Request directly (see below)
+
+**👥 Everyone:** Use our [server request form](https://github.com/remotemcplist/servers/issues/new/choose) and we'll help you create the YAML
+
+## 📝 Method 1: Direct Pull Request (Recommended)
+
+1. **Fork** this repository
+2. **Copy** `example-server.yaml` to `servers/your-server.yaml`
+3. **Edit** with your server details
+4. **Validate**: `python scripts/validate.py servers/your-server.yaml`
+5. **Commit**: `Add [Server Name] MCP server`
+6. **Push** and create Pull Request
+
+## 📄 Method 2: Server Request Issue
+
+1. [Open a server request](https://github.com/remotemcplist/servers/issues/new/choose)
+2. Select "New Server Request"
+3. Fill out all fields
+4. Submit the issue
+5. We'll help generate the YAML
+6. Create PR with the generated YAML
 
 ## 📝 Contribution Guidelines
 

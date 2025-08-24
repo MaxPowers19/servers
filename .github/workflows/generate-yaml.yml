@@ -1,0 +1,51 @@
+name: Generate YAML from Issue
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  generate-yaml:
+    if: github.event.label.name == 'generate-yaml'
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Parse Issue and Generate YAML
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const issue = context.payload.issue;
+          const body = issue.body;
+          
+          // Parse the issue body to extract form data
+          // This is a template for future automation
+          
+          const comment = `## Generated YAML File
+          
+          Based on your submission, here's the YAML file for your server:
+          
+          \`\`\`yaml
+          # Copy this content to servers/your-server.yaml
+          # Then create a Pull Request
+          
+          id: your-server-id
+          name: Your Server Name
+          # ... generated content ...
+          \`\`\`
+          
+          ### Next Steps:
+          1. Copy the YAML above
+          2. Fork this repository
+          3. Create \`servers/your-server.yaml\`
+          4. Submit a Pull Request
+          
+          Need help? Ask in the comments below!`;
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: comment
+          });

@@ -1,5 +1,11 @@
 blank_issues_enabled: true
 contact_links:
-  - name: RemoteMCPList Website
+  - name: 📚 Contributing Guide
+    url: https://github.com/remotemcplist/servers/blob/main/CONTRIBUTING.md
+    about: Learn how to submit servers via Pull Request
+  - name: 🌐 RemoteMCPList Website
     url: https://www.remotemcplist.com
-    about: Visit our main website to browse MCP servers
+    about: Browse all MCP servers in our directory
+  - name: 💬 Discussions
+    url: https://github.com/remotemcplist/servers/discussions
+    about: Ask questions and discuss MCP servers

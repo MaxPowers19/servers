@@ -1,0 +1,53 @@
+# Example MCP Server YAML Template
+# Copy this file to servers/your-server-name.yaml and update with your server's information
+
+id: example-mcp                 # Unique identifier (lowercase, hyphens)
+name: Example MCP Server         # Display name
+category: development            # Choose: development, data-analysis, communication, payments, cloud, productivity, security, database, ai-ml, monitoring
+
+description: Brief description of what your server does (20-200 characters)
+
+long_description: |
+  A more detailed description of your MCP server.
+  Explain what it does, its main features, and use cases.
+  This should be longer than the short description.
+
+maintainer:
+  name: Your Name/Organization   # Your name or organization
+  github: yourusername           # GitHub username (without @)
+  website: example.com           # Optional: website domain
+
+authentication:
+  type: oauth2                   # Choose: oauth2, api-key, none
+  provider: your-provider        # e.g., github, google, custom
+  instructions: |
+    Step-by-step instructions for obtaining credentials:
+    1. Go to your service's developer console
+    2. Create a new application
+    3. Copy the API key or OAuth credentials
+    4. Configure in your MCP client
+
+endpoints:
+  production: https://api.example.com/mcp  # Required: production endpoint
+  # sandbox: https://sandbox.example.com/mcp  # Optional: sandbox endpoint
+
+capabilities:
+  - id: capability.one
+    name: First Capability
+    description: What this capability does
+  - id: capability.two  
+    name: Second Capability
+    description: What this other capability does
+
+tags:
+  - example
+  - mcp
+  - remote
+  - your-tags-here
+
+verification:
+  status: pending                # Options: verified, pending, unverified
+  tested_date: "2024-12-19T00:00:00Z"
+  security_audit: false
+
+featured: false                  # Only one server should be featured

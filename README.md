@@ -14,20 +14,23 @@ This repository contains the data that powers [RemoteMCPList.com](https://remote
 - 🌐 **Browse Servers**: [remotemcplist.com](https://remotemcplist.com)
 - 📚 **API Access**: [remotemcplist.com/api/servers.json](https://remotemcplist.com/api/servers.json)
 - 🤖 **AI Discovery**: [remotemcplist.com/llms.txt](https://remotemcplist.com/llms.txt)
-- 📋 **Submit Server**: [Create Issue](https://github.com/remotemcplist/servers/issues/new/choose)
+- 📋 **Submit Server**: [Contributing Guide](https://github.com/remotemcplist/servers/blob/main/CONTRIBUTING.md)
 
 ## 🤝 Contributing a New Server
 
-### Option 1: GitHub Issue (Easiest)
-1. [Open a new issue](https://github.com/remotemcplist/servers/issues/new/choose)
-2. Fill out the form
-3. Submit - we'll create the YAML file for you!
-
-### Option 2: Pull Request
+### Option 1: For Technical Users (Direct PR)
 1. Fork this repository
-2. Create a new YAML file in `servers/` directory
-3. Follow the format below
-4. Submit a pull request
+2. Copy `example-server.yaml` to `servers/your-server.yaml`
+3. Fill in your server details
+4. Run validation: `python scripts/validate.py servers/your-server.yaml`
+5. Submit a pull request
+
+### Option 2: For Everyone (Request Form)
+1. [Open a server request issue](https://github.com/remotemcplist/servers/issues/new/choose)
+2. Fill out the structured form
+3. We'll help you create the YAML and PR
+
+📖 **[Full guide in CONTRIBUTING.md](CONTRIBUTING.md)**
 
 ## 📄 Server YAML Format
 
