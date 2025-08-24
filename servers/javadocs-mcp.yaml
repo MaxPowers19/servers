@@ -1,0 +1,51 @@
+id: javadocs-mcp
+name: Javadocs.dev
+category: development
+
+description: Browse and search Java, Kotlin, and Scala library documentation from Maven Central
+long_description: |
+  The Javadocs.dev MCP server provides programmatic access to Java, Kotlin, and Scala
+  library documentation from Maven Central. Query for the latest version of any artifact,
+  browse the complete contents of javadoc jars, and retrieve full documentation for 
+  specific classes and methods. Built with ZIO and designed for efficient access to
+  Maven Central's vast documentation repository. Perfect for AI assistants and development
+  tools that need instant access to Java API documentation.
+
+maintainer:
+  name: James Ward
+  github: jamesward
+  website: javadocs.dev
+
+authentication:
+  type: none
+  instructions: |
+    No authentication required. The Javadocs.dev MCP server is publicly accessible
+    and can be used immediately without any API keys or credentials.
+
+endpoints:
+  production: https://www.javadocs.dev/mcp
+
+capabilities:
+  - id: get.latest
+    name: Get Latest Version
+    description: Retrieve the latest version of a Maven Central artifact by group and artifact ID
+  - id: javadoc.contents
+    name: List Javadoc Contents
+    description: Get a list of all classes and packages in a javadoc jar for a specific artifact version
+  - id: javadoc.symbol
+    name: Get Symbol Documentation
+    description: Retrieve the full javadoc content for a specific class, method, or symbol
+
+tags:
+  - documentation
+  - java
+  - kotlin
+  - scala
+  - remote
+
+verification:
+  status: pending
+  tested_date: "2025-08-19T00:00:00Z"
+  security_audit: false
+
+featured: false
