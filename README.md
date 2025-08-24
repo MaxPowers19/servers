@@ -14,12 +14,12 @@ This repository contains the data that powers [RemoteMCPList.com](https://remote
 - 🌐 **Browse Servers**: [remotemcplist.com](https://remotemcplist.com)
 - 📚 **API Access**: [remotemcplist.com/api/servers.json](https://remotemcplist.com/api/servers.json)
 - 🤖 **AI Discovery**: [remotemcplist.com/llms.txt](https://remotemcplist.com/llms.txt)
-- 📋 **Submit Server**: [Create Issue](https://github.com/remotemcplist/servers/issues/new?template=new-server.yml)
+- 📋 **Submit Server**: [Create Issue](https://github.com/remotemcplist/servers/issues/new/choose)
 
 ## 🤝 Contributing a New Server
 
 ### Option 1: GitHub Issue (Easiest)
-1. [Open a new issue](https://github.com/remotemcplist/servers/issues/new?template=new-server.yml)
+1. [Open a new issue](https://github.com/remotemcplist/servers/issues/new/choose)
 2. Fill out the form
 3. Submit - we'll create the YAML file for you!
 
