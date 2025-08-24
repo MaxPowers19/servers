@@ -18,6 +18,7 @@ maintainer:
 
 authentication:
   type: none
+  provider: none
   instructions: |
     No authentication required. The Javadocs.dev MCP server is publicly accessible
     and can be used immediately without any API keys or credentials.
