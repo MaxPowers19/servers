@@ -1,34 +1,66 @@
 id: composio-rube
 name: Rube
 category: productivity
-description: It connects AI chat tools to more than 500 business and productivity applications
-long_description: It connects AI chat tools to more than 500 business and productivity applications – things like Gmail, Slack, Notion, GitHub, Linear, Airtable, and many others. Once installed, you can ask your AI tool to perform everyday tasks (e.g. “send an email to the latest customer,” “create a Linear issue,” “update my Notion database,” or “post an update to Slack”) and Rube will securely talk to the relevant apps on your behalf.
+
+description: Connect AI assistants to 500+ apps like Slack, Notion, GitHub, Gmail and more
+long_description: |
+  Rube by Composio is a powerful MCP server that connects AI assistants to over 500 business and
+  productivity applications including Gmail, Slack, Notion, GitHub, Linear, Airtable, and many others.
+  
+  With Rube, your AI assistant can perform real-world actions across your entire tech stack. Ask it to
+  send emails, create issues, update databases, post messages, or automate workflows across multiple
+  platforms. Rube handles the secure communication with each service, allowing seamless integration
+  without complex setup.
+  
+  Features include bring-your-own credentials, team-wide app access, and support for major MCP clients
+  like VSCode, Claude, and Cursor. Connect an app once and your whole team can use it instantly.
+
 maintainer:
   name: Composio
   github: Composiohq
   website: composio.dev
+
 authentication:
-  type: OAuth2
-  provider: Composio
-  instructions:
-  1. Go to rube.composio.dev
-  2. Set up the server for your client
-  3. Composio handles authentication for you
+  type: oauth2
+  provider: composio
+  instructions: |
+    1. Visit rube.composio.dev
+    2. Sign up or log in to your Composio account
+    3. Configure the MCP server for your client (VSCode, Claude, Cursor, etc.)
+    4. Add your own credentials and API keys for the apps you want to connect
+    5. Composio handles the secure authentication flow for each integrated service
+
 endpoints:
   production: https://rube.composio.dev/mcp
+
 capabilities:
-- id: read
-  name: Read Data
-  description: Read data from Composio
-- id: write
-  name: Write Data
-  description: Write data to Composio
+  - id: app.connect
+    name: Connect Apps
+    description: Connect and authenticate with any of the 500+ supported applications
+  - id: app.execute
+    name: Execute Actions
+    description: Perform actions across connected apps (send emails, create tickets, update databases)
+  - id: workflow.automate
+    name: Automate Workflows
+    description: Chain actions across multiple apps to create automated workflows
+  - id: data.sync
+    name: Sync Data
+    description: Read and write data between different applications seamlessly
+
 tags:
-- productivity
-- mcp
-- remote
+  - productivity
+  - integration
+  - automation
+  - slack
+  - notion
+  - github
+  - gmail
+  - mcp
+  - remote
+
 verification:
   status: pending
-  tested_date: '2025-08-21T00:00:00Z'
+  tested_date: "2025-08-21T00:00:00Z"
   security_audit: false
+
 featured: false
