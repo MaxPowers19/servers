@@ -1,0 +1,71 @@
+id: seolinkmap-mcp                    # Unique identifier (lowercase, hyphens)
+name: SEOLinkMap MCP Server           # Display name
+category: data-analysis               # One of: development, data-analysis, communication, 
+                                     # payments, cloud, productivity, security, database, 
+                                     # ai-ml, monitoring
+description: Statistical SEO analysis via MCP - built on open source seolinkmap/waasup framework  # 20-200 characters
+long_description: |                   # Detailed description (must be longer than description)
+  SEOLinkMap MCP Server provides comprehensive SEO analysis through statistical SERP intelligence.
+  The public MCP offers authless access for website evaluation and SEO knowledge base queries.
+  Private MCP URLs (OAuth2) enable conversational access to personal SEO data, competitor research,
+  PageRank analysis, and mathematical correlation studies. Features academic-level statistical rigor
+  with SERP-specific analysis that debunks generic SEO advice through contradictory findings across
+  different keywords. Transforms complex SEO data into actionable insights via natural language queries.
+
+maintainer:
+  name: SEOLinkMap                    # Your name or organization
+  github: seolinkmap                  # GitHub username (assuming)
+  website: https://seolinkmap.com     # Optional (domain or full URL)
+
+authentication:
+  type: none                          # One of: oauth2, api-key, none
+  provider: custom                    # e.g., github, google, custom
+  instructions: |                     # How to get credentials
+    Public MCP: No authentication required - use https://seolinkmap.com/mcp
+    Private MCP: 
+    1. Sign up for free account at https://seolinkmap.com/signup
+    2. Access your private MCP URL from account dashboard
+    3. OAuth2 authorization flow connects your AI assistant to personal SEO data
+    4. Configure project access permissions in account settings
+
+endpoints:
+  production: https://seolinkmap.com/mcp              # Required (public endpoint)
+  #private: Available per user account after signup    # Private MCP URLs provided to users
+
+capabilities:                         # List what the server can do
+  - id: website.analysis
+    name: Website Analysis
+    description: Complete site crawling with PageRank calculations and technical audits
+  - id: serp.correlation
+    name: SERP Correlation Analysis
+    description: Statistical analysis of ranking factors with academic rigor and significance testing
+  - id: competitor.research
+    name: Competitor Intelligence
+    description: SERP-specific competitor analysis with backlink profiles and statistical validation
+  - id: content.optimization
+    name: Content Analysis
+    description: Real-time SEO content measurement including keyword density and readability metrics
+  - id: performance.tracking
+    name: Performance Analytics
+    description: GSC/GA4 integration with conversational access to traffic and ranking data
+  - id: statistical.intelligence
+    name: Statistical SEO Intelligence
+    description: P-values, correlation coefficients, Cooks distance, coefficient of variation, regression analysis through natural language queries
+
+tags:                                # For search/filtering
+  - seo
+  - analytics
+  - statistics
+  - serp-analysis
+  - competitor-research
+  - pagerank
+  - mcp
+  - conversational-ai
+  - data-analysis
+
+verification:
+  status: unverified                    # verified, pending, or unverified
+  tested_date: "2025-09-02T00:00:00Z"
+  security_audit: false
+
+featured: false                      # Show on homepage (only one should be true)
